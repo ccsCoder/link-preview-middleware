@@ -2,7 +2,10 @@
   "name": "website-preview-generator-api",
   "version": "1.0.0",
   "description": "A node api to get the preview of any link",
-  "main": "index.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "author": "Nishant",
   "license": "MIT",
   "private": false,
