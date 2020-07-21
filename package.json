@@ -1,0 +1,14 @@
+{
+  "name": "website-preview-generator-api",
+  "version": "1.0.0",
+  "description": "A node api to get the preview of any link",
+  "main": "index.js",
+  "author": "Nishant",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "link-preview-generator": "^0.0.4"
+  }
+}
