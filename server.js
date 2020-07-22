@@ -5,6 +5,8 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 
+const puppeteerArgs = ['--no-sandbox'];
+
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
@@ -20,7 +22,7 @@ app.get('/', (req, res) => {
 
 app.get('/get-preview-info', cors(corsOptions) ,function(req, res) {
   console.log(req.body.url);
-  linkPreviewGenerator(req.body.url)
+  linkPreviewGenerator(req.body.url, puppeteerArgs)
     .then(resp => {
       resp.img = resp.img === null ? './default.png': resp.img;
       res.json(resp);
